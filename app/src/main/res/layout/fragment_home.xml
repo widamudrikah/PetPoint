@@ -4,19 +4,188 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:padding="16dp"
+    android:background="@color/gray_100">
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@drawable/img_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/tv_hello"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hallo"
+        app:layout_constraintStart_toEndOf="@id/img_profile"
+        app:layout_constraintTop_toTopOf="@id/img_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/jhon_due"
+        app:layout_constraintStart_toEndOf="@id/img_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_hello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/img_profile"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/img_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/banner_home"
+        android:layout_marginTop="18dp" />
+
+    <LinearLayout
+        android:id="@+id/mainFiture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/img_banner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <!-- CardView Pertama -->
+        <androidx.cardview.widget.CardView
+            style="@style/card_view"
+            app:cardCornerRadius="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/card_widget"
+                android:background="@color/crail">
+
+                <ImageView
+                    android:id="@+id/img_notif_red"
+                    android:src="@drawable/ic_notif_red"
+                    style="@style/image_card"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/title_card"
+                    android:text="@string/emergency"
+                    app:layout_constraintTop_toBottomOf="@id/img_notif_red"
+                    style="@style/title_image_card"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/visit"
+                    android:text="@string/visit_and_call"
+                    app:layout_constraintTop_toBottomOf="@+id/title_card"
+                    style="@style/sub_title_card"
+                    tools:ignore="MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView Kedua -->
+        <androidx.cardview.widget.CardView
+            style="@style/card_view"
+            app:cardCornerRadius="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/card_widget"
+                android:background="#FEA33E">
+
+                <ImageView
+                    android:id="@+id/img_report"
+                    android:src="@drawable/ic_heart_yellow"
+                    style="@style/image_card"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_title_report"
+                    style="@style/title_image_card"
+                    android:text="@string/my_report"
+                    app:layout_constraintTop_toBottomOf="@id/img_report"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:text="@string/progress_amp_status"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_report"
+                    style="@style/sub_title_card"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView Kedua -->
+        <androidx.cardview.widget.CardView
+            style="@style/card_view"
+            app:cardCornerRadius="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/card_widget"
+                android:background="@color/jade">
+
+                <ImageView
+                    android:id="@+id/img_chat"
+                    android:src="@drawable/ic_chat_green"
+                    style="@style/image_card"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_title_chat_bot"
+                    style="@style/title_image_card"
+                    android:text="@string/chat_bot"
+                    app:layout_constraintTop_toBottomOf="@id/img_chat"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:text="@string/ai_consul_room"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_chat_bot"
+                    style="@style/sub_title_card"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mainFiture"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/article_today"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_see_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See More"
+        app:layout_constraintTop_toBottomOf="@id/mainFiture"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_see_more"
+        android:layout_marginTop="16dp" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

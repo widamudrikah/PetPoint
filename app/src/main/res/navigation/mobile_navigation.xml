@@ -12,14 +12,20 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.capstone.petpoint.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_emergency"
+        android:name="com.capstone.petpoint.ui.emergency.EmergencyFragment"
+        android:label="Emergency"
+        tools:layout="@layout/fragment_emergency" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.capstone.petpoint.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_chat_bot"
+        android:name="com.capstone.petpoint.ui.chat_bot.ChatBotFragment"
+        android:label="@string/chat_bot"
+        tools:layout="@layout/fragment_chat_bot" />
+
+    <fragment
+        android:id="@+id/navigation_my_report"
+        android:name="com.capstone.petpoint.ui.myreport.MyReportFragment"
+        android:label="@string/my_report"
+        tools:layout="@layout/fragment_my_report" />
 </navigation>

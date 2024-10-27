@@ -1,0 +1,11 @@
+<!-- res/drawable/dashed_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#D3D3D3" /> <!-- Warna latar abu-abu -->
+    <corners android:radius="16dp" /> <!-- Radius sudut lengkung -->
+
+    <stroke
+        android:width="2dp"
+        android:color="#A9A9A9"
+        android:dashWidth="10dp"
+        android:dashGap="5dp" /> <!-- Garis border bergaris -->
+</shape>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.emergency.EmergencyFragment"
+    android:background="@color/crail"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/emergency"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/quick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_back"
+        android:text="@string/quick_rescue_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/gray_200"
+        android:gravity="left"
+        android:layout_marginTop="40dp"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/quick"
+        android:text="@string/make_sure"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/gray_200" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="24dp"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/tv_documentation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/documentation"
+                android:textSize="14sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/input_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashed_border"
+                app:layout_constraintTop_toBottomOf="@id/tv_documentation"
+                android:layout_marginTop="12dp"
+                android:padding="20dp"
+                android:gravity="center"
+                android:onClick="openFilePicker"> <!-- Tambahkan fungsi untuk membuka file picker -->
+
+                <!-- Icon Kamera -->
+                <ImageView
+                    android:id="@+id/icon_camera"
+                    android:layout_width="34dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/baseline_camera_alt_24"
+                    android:layout_centerInParent="true" />
+
+                <!-- Text Take Picture -->
+                <TextView
+                    android:id="@+id/text_take_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/icon_camera"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/take_picture"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_pet_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/input_photo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/pet_catagories"
+                android:layout_marginTop="21dp"
+                android:textSize="14sp"
+                />
+
+            <LinearLayout
+                android:id="@+id/select_pet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_pet_category">
+
+                <!-- Pilihan Kucing -->
+                <ImageView
+                    android:id="@+id/option_cat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/img_cat_option"
+                    android:contentDescription="@string/cat"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Pilihan Anjing -->
+                <ImageView
+                    android:id="@+id/option_dog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/img_dog_option"
+                    android:contentDescription="@string/dog"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_marginStart="8dp"
+                     />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_search_comunity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/select_pet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/search_community"
+                android:textSize="14sp"
+                />
+
+            <EditText
+                android:id="@+id/edt_search_community"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bc_edit_text"
+                android:padding="12dp"
+                android:drawableStart="@drawable/baseline_search_24"
+                android:hint="@string/search_community"
+                android:drawablePadding="8dp"
+                android:textColorHint="#757575"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:layout_marginTop="14dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_search_comunity"
+            />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

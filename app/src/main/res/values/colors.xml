@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+<!-- Colors -->
+
+    <color name="blue">#29ABDF</color>
+    <color name="gray">#6D6D6D</color>
+    <color name="gray_100">#F2F4F5</color>
+    <color name="crail">#D27461</color>
+    <color name="jade">#38CF8E</color>
+    <color name="gray_200">#F3F5F7</color>
+
+<!-- Colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

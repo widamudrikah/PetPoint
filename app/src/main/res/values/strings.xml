@@ -3,4 +3,28 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="my_report">My Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emergency">Emergency</string>
+    <string name="chat_bot">Chat Bot</string>
+    <string name="this_is_my_report_fragment">This is my report fragment</string>
+    <string name="hallo">Hallo 👋</string>
+    <string name="user_name">Muhammad Angga</string>
+    <string name="visit_and_call">Visit and Call</string>
+    <string name="ai_consul_room">AI consul room</string>
+    <string name="progress_amp_status"><![CDATA[Progress & status]]></string>
+    <string name="article_today">Article today</string>
+    <string name="title_article">Having a pet, can reduce stress</string>
+    <string name="desc_article">Interacting with animals has been shown to decrease levels of.....</string>
+    <string name="_2_horus_ago">2 horus ago</string>
+    <string name="quick_rescue_service">Quick rescue service</string>
+    <string name="make_sure">Make sure all the identities and addresses entered are correct, and please do first aid according to the instructions that will be given</string>
+    <string name="documentation">Documentation</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="pet_catagories">Pet catagories</string>
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="search_community">Search Community</string>
+    <string name="jhon_due">Jhon Due</string>
 </resources>
