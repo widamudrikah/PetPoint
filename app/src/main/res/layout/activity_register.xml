@@ -61,7 +61,10 @@
                 android:text="@string/username"
                 android:inputType="text"
                 android:textColor="@color/gray"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="40dp"
+                android:textSize="14sp"
+                android:background="@drawable/bc_edit_text"
+                android:padding="12dp"/>
 
             <EditText
                 android:id="@+id/tv_email"
@@ -71,7 +74,10 @@
                 android:text="@string/email"
                 android:textColor="@color/gray"
                 android:layout_marginTop="10dp"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:textSize="14sp"
+                android:background="@drawable/bc_edit_text"
+                android:padding="12dp"/>
 
             <EditText
                 android:id="@+id/tv_password"
@@ -81,7 +87,10 @@
                 android:text="@string/password"
                 android:textColor="@color/gray"
                 android:layout_marginTop="10dp"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textSize="14sp"
+                android:background="@drawable/bc_edit_text"
+                android:padding="12dp"/>
 
             <EditText
                 android:id="@+id/tv_role"
@@ -91,7 +100,10 @@
                 android:text="@string/role"
                 android:textColor="@color/gray"
                 android:layout_marginTop="10dp"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:background="@drawable/bc_edit_text"
+                android:padding="12dp"/>
 
             <Button
                 android:id="@+id/btn_sign_up"
@@ -100,12 +112,6 @@
                 android:text="@string/sign_up"
                 app:layout_constraintTop_toBottomOf="@id/tv_role"
                 android:layout_marginTop="10dp" />
-
-
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
