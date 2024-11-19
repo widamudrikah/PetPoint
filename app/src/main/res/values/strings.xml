@@ -27,4 +27,10 @@
     <string name="dog">Dog</string>
     <string name="search_community">Search Community</string>
     <string name="jhon_due">Jhon Due</string>
+    <string name="let_s_sign_up_first">Let’s sign up first</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="role">Role</string>
 </resources>
