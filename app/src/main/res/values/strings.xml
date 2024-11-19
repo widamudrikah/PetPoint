@@ -34,4 +34,15 @@
     <string name="sign_up">Sign Up</string>
     <string name="role">Role</string>
     <string name="or">OR</string>
+    <string name="set_location">Set Location</string>
+    <string name="note">Note :</string>
+    <string name="confirm">Confirm</string>
+    <string name="cat_lovers">Cat Lovers</string>
+    <string name="my_reports">My Reports</string>
+    <string name="thank_you">Thank you for being aware of our environment</string>
+    <string name="catagory_of_pet">Catagory of pet</string>
+    <string name="reporting_time">Reporting time</string>
+    <string name="reporting">Reporting time</string>
+    <string name="_10_11_2024">10/11/2024</string>
+    <string name="witing_list">Witing List</string>
 </resources>

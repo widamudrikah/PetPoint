@@ -186,6 +186,4 @@
         app:layout_constraintTop_toBottomOf="@id/tv_see_more"
         android:layout_marginTop="16dp" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
