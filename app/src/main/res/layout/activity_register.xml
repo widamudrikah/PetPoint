@@ -25,8 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:cardCornerRadius="24dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        >
+        android:layout_marginEnd="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -42,8 +41,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -53,45 +51,50 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="10dp" />
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/tv_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tv_lets"
-                android:text="@string/username"
+                android:hint="@string/username"
                 android:inputType="text"
-                android:textColor="@color/gray"
-                android:layout_marginTop="40dp"/>
+                android:textColor="@color/gray"/>
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/tv_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tv_username"
-                android:text="@string/email"
+                android:hint="@string/email"
                 android:textColor="@color/gray"
-                android:layout_marginTop="10dp"
-                android:inputType="text"/>
-
-            <EditText
+                android:layout_marginTop="10dp"/>
+            
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_text_input_layout"
+                app:passwordToggleEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/tv_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tv_email"
-                android:text="@string/password"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:hint="@string/password"
                 android:textColor="@color/gray"
-                android:layout_marginTop="10dp"
-                android:inputType="text" />
+                android:layout_marginTop="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/tv_role"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tv_password"
-                android:text="@string/role"
+                app:layout_constraintTop_toBottomOf="@id/username_text_input_layout"
+                android:hint="@string/role"
                 android:textColor="@color/gray"
-                android:layout_marginTop="10dp"
-                android:inputType="numberDecimal"/>
+                android:layout_marginTop="10dp"/>
 
             <Button
                 android:id="@+id/btn_sign_up"
@@ -100,17 +103,6 @@
                 android:text="@string/sign_up"
                 app:layout_constraintTop_toBottomOf="@id/tv_role"
                 android:layout_marginTop="10dp" />
-
-
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.cardview.widget.CardView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

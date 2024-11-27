@@ -53,12 +53,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="10dp" />
 
-            <EditText
-                android:id="@+id/tv_username"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tv_email_login"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 app:layout_constraintTop_toBottomOf="@id/tv_lets"
-                android:text="@string/username"
+                android:hint="@string/email"
                 android:inputType="text"
                 android:textColor="@color/gray"
                 android:layout_marginTop="40dp"
@@ -66,12 +66,12 @@
                 android:background="@drawable/bc_edit_text"
                 android:padding="12dp"/>
 
-            <EditText
-                android:id="@+id/tv_email"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tv_pass_login"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                app:layout_constraintTop_toBottomOf="@id/tv_username"
-                android:text="@string/email"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_login"
+                android:hint="@string/password"
                 android:textColor="@color/gray"
                 android:layout_marginTop="10dp"
                 android:inputType="text"
@@ -79,13 +79,12 @@
                 android:background="@drawable/bc_edit_text"
                 android:padding="12dp"/>
 
-
             <Button
-                android:id="@+id/btn_sign_up"
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up"
-                app:layout_constraintTop_toBottomOf="@id/tv_email"
+                android:text="@string/login"
+                app:layout_constraintTop_toBottomOf="@id/tv_pass_login"
                 android:layout_marginTop="22dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
