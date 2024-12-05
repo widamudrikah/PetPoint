@@ -86,7 +86,6 @@
                     android:layout_marginTop="12dp"
                     android:background="@drawable/dashed_border"
                     android:gravity="center"
-                    android:onClick="openFilePicker"
                     android:padding="20dp"
                     app:layout_constraintTop_toBottomOf="@id/tv_documentation"> <!-- Tambahkan fungsi untuk membuka file picker -->
 
@@ -110,6 +109,14 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="normal" />
+
+                    <!-- ImageView untuk menampilkan gambar -->
+                    <ImageView
+                        android:id="@+id/selected_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
                 </RelativeLayout>
 
                 <TextView
@@ -123,7 +130,40 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/input_photo" />
 
-                <LinearLayout
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/select_pet"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="16dp"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/tv_pet_category">-->
+
+<!--                    &lt;!&ndash; Pilihan Kucing &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/option_cat"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginEnd="8dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                        android:contentDescription="@string/cat"-->
+<!--                        android:src="@drawable/img_cat_option" />-->
+
+<!--                    &lt;!&ndash; Pilihan Anjing &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/option_dog"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="8dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                        android:contentDescription="@string/dog"-->
+<!--                        android:src="@drawable/img_dog_option" />-->
+
+<!--                </LinearLayout>-->
+
+                <RadioGroup
                     android:id="@+id/select_pet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,75 +173,63 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_pet_category">
 
                     <!-- Pilihan Kucing -->
-                    <ImageView
+                    <RadioButton
                         android:id="@+id/option_cat"
-                        android:layout_width="0dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_weight="1"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/cat"
-                        android:src="@drawable/img_cat_option" />
+                        android:button="@null"
+                        android:drawableTop="@drawable/img_cat_option"
+                        android:drawablePadding="8dp"
+                        android:text="@string/cat"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
 
                     <!-- Pilihan Anjing -->
-                    <ImageView
+                    <RadioButton
                         android:id="@+id/option_dog"
-                        android:layout_width="0dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_weight="1"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/dog"
-                        android:src="@drawable/img_dog_option" />
+                        android:button="@null"
+                        android:drawableTop="@drawable/img_dog_option"
+                        android:drawablePadding="8dp"
+                        android:text="@string/dog"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"/>
+                </RadioGroup>
 
-                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_search_comunity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/search_community"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/select_pet" />
 
-                <EditText
-                    android:id="@+id/edt_search_community"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/bc_edit_text"
-                    android:drawableStart="@drawable/baseline_search_24"
-                    android:drawablePadding="8dp"
-                    android:hint="@string/search_community"
-                    android:inputType="text"
-                    android:padding="12dp"
-                    android:textColorHint="#757575"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@id/tv_search_comunity" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_community"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    app:layout_constraintTop_toBottomOf="@id/edt_search_community"
-                    android:layout_marginTop="12dp"/>
 
                 <EditText
                     android:id="@+id/edt_set_location"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
                     android:background="@drawable/bc_edit_text"
-                    android:drawableEnd="@drawable/baseline_location_on_24"
                     android:drawablePadding="8dp"
                     android:hint="@string/set_location"
                     android:inputType="text"
                     android:padding="12dp"
                     android:textColorHint="#757575"
                     android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@id/rv_community" />
+                    app:layout_constraintTop_toBottomOf="@id/select_pet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/icon_set_location"
+                    app:layout_constraintHorizontal_weight="1" />
+
+                <ImageView
+                    android:id="@+id/icon_set_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_target"
+                    app:layout_constraintTop_toTopOf="@id/edt_set_location"
+                    app:layout_constraintBottom_toBottomOf="@id/edt_set_location"
+                    app:layout_constraintStart_toEndOf="@id/edt_set_location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="8dp"/>
+
 
                 <TextView
                     android:id="@+id/tv_message"
@@ -218,15 +246,17 @@
                 <EditText
                     android:id="@+id/edt_note"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
                     android:background="@drawable/bc_edit_text"
                     android:drawablePadding="8dp"
-                    android:inputType="text"
                     android:padding="12dp"
                     android:textColorHint="#757575"
                     android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@id/tv_message" />
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:minLines="4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_message"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -236,6 +266,7 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             app:layout_constraintTop_toBottomOf="@id/card_view"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="20dp"
             android:text="@string/confirm"
             android:textSize="14sp"

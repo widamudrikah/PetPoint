@@ -2,6 +2,7 @@ package com.capstone.petpoint.auth
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -39,7 +40,11 @@ class LoginActivity : AppCompatActivity() {
                         response: Response<LoginResponse>
                     ) {
                         if (response.isSuccessful) {
-                            val token = response.body()?.token
+
+                            val loginResponse = response.body()
+                            Log.d("LoginActivity", "Response body: $loginResponse")
+
+                            val token = response.body()?.data?.token
 
                             // Simpan token di SharedPreferences
                             val sharedPreferences =

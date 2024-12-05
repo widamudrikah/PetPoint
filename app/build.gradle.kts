@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -57,4 +58,17 @@ dependencies {
     implementation(libs.androidx.cardview)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+
+//    Retrofit
+    implementation(libs.glide)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+//    Viewmodel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+
+//    Fused Location Client
+    implementation(libs.play.services.location)
 }
