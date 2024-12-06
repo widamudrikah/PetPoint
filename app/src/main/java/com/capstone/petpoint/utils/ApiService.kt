@@ -1,10 +1,12 @@
 package com.capstone.petpoint.utils
 
+import com.capstone.petpoint.response.ListEmergencyUserResponse
 import com.capstone.petpoint.response.PostEmergencyResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Multipart
 import retrofit2.http.POST
@@ -64,4 +66,9 @@ interface ApiService {
         @Part("notes") notes: RequestBody,
         @Part("pet_category") petCategory : RequestBody,
     ): PostEmergencyResponse
+
+    @GET("emergency/userEmergency")
+    fun getEmergencyUser(
+        @Header("Authorization") token: String
+    ) : Call<ListEmergencyUserResponse>
 }

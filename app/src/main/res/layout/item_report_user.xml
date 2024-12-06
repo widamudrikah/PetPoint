@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/yellow"
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -12,6 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:backgroundTint="@color/gray_200"
         app:cardCornerRadius="24dp"
+        android:layout_margin="16dp"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,6 +32,7 @@
                 />
 
             <TextView
+                android:id="@+id/tv_pet_category_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cat"
@@ -58,8 +61,18 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tv_report_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_report_date"
+                android:text="10.50"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
                 android:id="@+id/tv_status"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tv_report_date"
                 android:text="Report status"

@@ -2,6 +2,7 @@ package com.capstone.petpoint.ui.emergency
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.net.Uri
@@ -18,14 +19,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.capstone.petpoint.MainActivity
 import com.capstone.petpoint.R
 import com.capstone.petpoint.databinding.FragmentEmergencyBinding
 import com.capstone.petpoint.response.PostEmergencyResponse
+import com.capstone.petpoint.ui.myreport.MyReportFragment
 import com.capstone.petpoint.utils.ApiService
 import com.capstone.petpoint.utils.RetrofitInstance
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
@@ -115,7 +120,7 @@ class EmergencyFragment : Fragment() {
                     if (location != null) {
                         val longitude = location.longitude
                         val latitude = location.latitude
-                        showLocation(longitude, latitude)
+                        showLocation(latitude, longitude)
                     } else {
                         binding.edtSetLocation.setText("Unable to fetch location")
                     }
@@ -201,6 +206,10 @@ class EmergencyFragment : Fragment() {
                         requestBodyPetCategory
                     )
                     successResponse.message?.let { showToast(it) }
+                    val navConroller = findNavController()
+                    navConroller.navigate(R.id.navigation_my_report)
+                    (requireActivity() as MainActivity).findViewById<BottomNavigationView>(R.id.mobile_navigation).menu.findItem(R.id.navigation_my_report).isChecked = true
+
 
                 } catch (e: HttpException) {
                     Log.e("EmergencyFragment", "HttpException: ${e.response()?.errorBody()?.string()}")
