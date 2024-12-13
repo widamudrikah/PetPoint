@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="6dp"
+    android:background="@color/gray_200">
+
+    <ImageView
+        android:id="@+id/img_story"
+        android:layout_width="360dp"
+        android:layout_height="180dp"
+        android:src="@drawable/image_welcome"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/story_name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ini_deskripsi_singkat"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- Add more views like ImageView for the photo or other data -->
+</LinearLayout>
